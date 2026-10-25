@@ -2,11 +2,13 @@ import { and, gte, isNull, or, sql } from "drizzle-orm";
 import { db, schema } from "@/db";
 import { ok, route } from "@/lib/api";
 import { requireUser } from "@/lib/auth";
+import { ensureStandardChallenges, STANDARD_CHALLENGES } from "@/lib/community";
 
 /** Challenges run by Vitalo plus those of the person's groups, with their own progress. */
 export const GET = route(async (request) => {
   const { user } = await requireUser(request);
   const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Zurich" }).format(new Date());
+  await ensureStandardChallenges(today);
   const rows = await db
     .select({
       challenge: schema.challenges,
@@ -34,6 +36,8 @@ export const GET = route(async (request) => {
       startsOn: r.challenge.startsOn,
       endsOn: r.challenge.endsOn,
       groupId: r.challenge.groupId,
+      // Unchanged standard challenges are shown with the app's own translated title.
+      standard: !r.challenge.groupId && STANDARD_CHALLENGES.some((c) => c.kind === r.challenge.kind && c.title === r.challenge.title),
       participants: r.participants,
       myDays: r.myDays,
     })),

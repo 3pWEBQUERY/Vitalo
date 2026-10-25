@@ -331,6 +331,29 @@ export async function groupRole(userId: string, groupId: string) {
 }
 
 /** Group challenge progress: a person marks a day; the server checks it lies within the challenge. */
+/** Challenges Vitalo always runs; the app shows them in the person's language (titles here are the German default). */
+export const STANDARD_CHALLENGES = [
+  { kind: "veggies", title: "7 Tage Gemüse", description: "Eine Woche lang jeden Tag Gemüse eintragen.", targetDays: 7 },
+  { kind: "water", title: "7 Tage Wasser", description: "Eine Woche lang jeden Tag dein Wasserziel erreichen.", targetDays: 7 },
+  { kind: "protein", title: "Protein an 5 von 7 Tagen", description: "An fünf Tagen dein Proteinziel erreichen.", targetDays: 5 },
+  { kind: "breakfast", title: "30 Tage Frühstück", description: "30 Tage lang dein Frühstück eintragen.", targetDays: 30 },
+] as const;
+
+/** Keeps one open Vitalo challenge per standard kind, each running for 90 days. */
+export async function ensureStandardChallenges(today: string) {
+  for (const standard of STANDARD_CHALLENGES) {
+    const [open] = await db.execute<{ id: string }>(sql`
+      select id from challenges
+      where group_id is null and kind = ${standard.kind} and title = ${standard.title}
+        and ends_on >= (${today}::date + ${standard.targetDays * 2}::int)
+      limit 1`);
+    if (open) continue;
+    await db.execute(sql`
+      insert into challenges (kind, title, description, target_days, starts_on, ends_on)
+      values (${standard.kind}, ${standard.title}, ${standard.description}, ${standard.targetDays}, ${today}::date, ${today}::date + 90)`);
+  }
+}
+
 export async function markChallengeDay(userId: string, challengeId: string, day: string) {
   const [challenge] = await db.select().from(schema.challenges).where(eq(schema.challenges.id, challengeId));
   if (!challenge) throw notFound();
