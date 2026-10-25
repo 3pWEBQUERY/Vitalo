@@ -88,6 +88,6 @@ Project **Vitalo** (region Amsterdam) with:
 | `cron-coach` | 02:00 UTC: `POST /api/internal/jobs/coach` with `X-Job-Secret`. |
 | `cron-maintenance` | 03:00 UTC: `POST /api/internal/jobs/maintenance`. |
 
-Every push to `main` deploys. After the first admin sign-in, remove `ADMIN_BOOTSTRAP_PASSWORD`
+Build, start (`npm start`), pre-deploy (`npm run release`) and healthcheck are set on the service in Railway. Every push to `main` deploys. After the first admin sign-in, remove `ADMIN_BOOTSTRAP_PASSWORD`
 from the backend variables. Still to add when available: `ANTHROPIC_API_KEY`, `BRANDFETCH_CLIENT_ID`,
 the Apple keys (`APPLE_*`, `APNS_*`).
