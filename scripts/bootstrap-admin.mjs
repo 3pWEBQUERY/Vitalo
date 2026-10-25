@@ -1,6 +1,8 @@
 // Creates the first admin on deploy when ADMIN_BOOTSTRAP_EMAIL and ADMIN_BOOTSTRAP_PASSWORD
 // are set and that address has no account yet. Does nothing otherwise, so it is safe on every
 // deploy. Remove both variables after the first sign-in.
+// With ADMIN_BOOTSTRAP_RESET=true an existing account gets this password instead, its lock is
+// lifted and two-factor sign-in is switched off (recovery when nobody can sign in anymore).
 import { randomBytes, scrypt as scryptCallback } from "node:crypto";
 import { promisify } from "node:util";
 import postgres from "postgres";
@@ -17,14 +19,21 @@ if (password.length < 12) {
 }
 
 const sql = postgres(process.env.DATABASE_URL ?? "postgres://localhost:5432/vitalo", { max: 1 });
+const reset = process.env.ADMIN_BOOTSTRAP_RESET === "true";
+const scrypt = promisify(scryptCallback);
+const salt = randomBytes(16);
+const hash = await scrypt(password.normalize("NFKC"), salt, 64, { N: 16384, r: 8, p: 1, maxmem: 64 * 1024 * 1024 });
+const passwordHash = `scrypt$16384$8$1$${salt.toString("base64")}$${hash.toString("base64")}`;
 const [existing] = await sql`select id from admin_users where email = ${email}`;
-if (existing) {
+if (existing && reset) {
+  await sql`update admin_users set password_hash = ${passwordHash}, failed_logins = 0, locked_until = null, disabled_at = null,
+            totp_enabled = false, totp_secret = null where id = ${existing.id}`;
+  await sql`delete from admin_sessions where admin_id = ${existing.id}`;
+  await sql`insert into audit_log (admin_id, action, target_type, target_id, details) values (null, 'admin.password_reset', 'admin', ${existing.id}, ${sql.json({ via: "bootstrap" })})`;
+  console.log(`bootstrap-admin: ${email} reset`);
+} else if (existing) {
   console.log(`bootstrap-admin: ${email} exists, skipped`);
 } else {
-  const scrypt = promisify(scryptCallback);
-  const salt = randomBytes(16);
-  const hash = await scrypt(password.normalize("NFKC"), salt, 64, { N: 16384, r: 8, p: 1, maxmem: 64 * 1024 * 1024 });
-  const passwordHash = `scrypt$16384$8$1$${salt.toString("base64")}$${hash.toString("base64")}`;
   const name = process.env.ADMIN_BOOTSTRAP_NAME ?? email.split("@")[0];
   const [admin] = await sql`insert into admin_users (email, name, password_hash, role) values (${email}, ${name}, ${passwordHash}, 'admin') returning id`;
   await sql`insert into audit_log (admin_id, action, target_type, target_id, details) values (null, 'admin.created', 'admin', ${admin.id}, ${sql.json({ via: "bootstrap" })})`;
