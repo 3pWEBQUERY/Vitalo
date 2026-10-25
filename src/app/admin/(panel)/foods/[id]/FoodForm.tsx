@@ -50,7 +50,7 @@ export function FoodForm({ food, brands }: { food?: Food; brands: string[] }) {
           </label>
           <label className="field"><span>Barcode</span><input type="text" name="barcode" defaultValue={food?.barcode ?? ""} inputMode="numeric" placeholder="EAN, 8 oder 13 Ziffern" /></label>
         </div>
-        <ImageUpload current={food?.imageUrl ?? null} />
+        <ImageUpload current={food?.imageUrl ?? null} foodId={food?.id} />
       </section>
 
       <section className="card form-section">
@@ -117,18 +117,47 @@ export function FoodForm({ food, brands }: { food?: Food; brands: string[] }) {
 }
 
 /** Product photo: pick or drop a file; it is stored in the bucket when the form is saved. */
-function ImageUpload({ current }: { current: string | null }) {
+/**
+ * Product photo. For an existing food the photo is uploaded as soon as it is chosen; a new food
+ * sends it with the form, because it has no id yet.
+ */
+function ImageUpload({ current, foodId }: { current: string | null; foodId?: string }) {
+  const toast = useToast();
+  const [stored, setStored] = useState(current);
   const [preview, setPreview] = useState<string | null>(null);
   const [remove, setRemove] = useState(false);
+  const [busy, setBusy] = useState<"upload" | "remove" | null>(null);
   const [dragging, setDragging] = useState(false);
   const input = useRef<HTMLInputElement>(null);
-  const shown = remove ? null : preview ?? current;
+  const shown = remove ? null : preview ?? stored;
 
-  // After saving, the stored photo becomes the current one.
+  // After saving the form, the stored photo becomes the current one.
   useEffect(() => {
+    setStored(current);
     setPreview(null);
     setRemove(false);
   }, [current]);
+
+  async function send(method: "POST" | "DELETE", file?: File) {
+    if (!foodId) return;
+    setBusy(method === "POST" ? "upload" : "remove");
+    try {
+      const body = file ? new FormData() : undefined;
+      if (file) body!.append("image", file);
+      const response = await fetch(`/admin/foods/${foodId}/image`, { method, body, credentials: "same-origin" });
+      const result = (await response.json().catch(() => ({}))) as { imageUrl?: string | null; error?: string };
+      if (!response.ok) throw new Error(result.error ?? "Das Bild konnte nicht gespeichert werden.");
+      setStored(result.imageUrl ?? null);
+      toast("success", file ? "Bild gespeichert." : "Bild entfernt.");
+    } catch (error) {
+      toast("error", error instanceof Error ? error.message : "Das Bild konnte nicht gespeichert werden.");
+    } finally {
+      if (preview) URL.revokeObjectURL(preview);
+      setPreview(null);
+      if (input.current) input.current.value = "";
+      setBusy(null);
+    }
+  }
 
   function choose(files: FileList | null) {
     const file = files?.[0];
@@ -136,7 +165,11 @@ function ImageUpload({ current }: { current: string | null }) {
     if (preview) URL.revokeObjectURL(preview);
     setPreview(URL.createObjectURL(file));
     setRemove(false);
+    if (foodId) void send("POST", file);
   }
+
+  const title = busy === "upload" ? "Wird hochgeladen …" : busy === "remove" ? "Wird entfernt …"
+    : preview ? "Neues Bild ausgewählt" : stored && !remove ? "Bild ersetzen" : "Bild hochladen";
 
   return (
     <div className="field">
@@ -144,24 +177,24 @@ function ImageUpload({ current }: { current: string | null }) {
       <div
         className="dropzone"
         data-dragging={dragging}
+        aria-busy={busy !== null}
         onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
         onDragLeave={() => setDragging(false)}
         onDrop={(e) => {
           e.preventDefault();
           setDragging(false);
-          if (input.current && e.dataTransfer.files.length) {
-            input.current.files = e.dataTransfer.files;
-            choose(e.dataTransfer.files);
-          }
+          if (busy || !e.dataTransfer.files.length) return;
+          if (input.current && !foodId) input.current.files = e.dataTransfer.files;
+          choose(e.dataTransfer.files);
         }}
       >
         <div className="dropzone-preview">{shown ? <img src={shown} alt="Produktbild" /> : <Icon name="image" size={26} />}</div>
         <div className="dropzone-text">
-          <strong>{preview ? "Neues Bild ausgewählt" : current && !remove ? "Bild ersetzen" : "Bild hochladen"}</strong>
-          <span className="sub">PNG, JPEG oder WebP bis 5 MB. Hierher ziehen oder auswählen. Wird verkleinert und ohne Kameradaten gespeichert.</span>
+          <strong>{title}</strong>
+          <span className="sub">PNG, JPEG oder WebP bis 5 MB. Hierher ziehen oder auswählen. {foodId ? "Wird sofort gespeichert, " : "Wird beim Speichern hochgeladen, "}verkleinert und ohne Kameradaten abgelegt.</span>
           <div className="dropzone-actions">
-            <button type="button" className="btn secondary small" onClick={() => input.current?.click()}><Icon name="image" size={14} />Datei wählen</button>
-            {(preview || (current && !remove)) && (
+            <button type="button" className="btn secondary small" disabled={busy !== null} onClick={() => input.current?.click()}><Icon name="image" size={14} />Datei wählen</button>
+            {!busy && (preview || (stored && !remove)) && (
               <button
                 type="button"
                 className="btn ghost small"
@@ -170,7 +203,8 @@ function ImageUpload({ current }: { current: string | null }) {
                     URL.revokeObjectURL(preview);
                     setPreview(null);
                     if (input.current) input.current.value = "";
-                  } else setRemove(true);
+                  } else if (foodId) void send("DELETE");
+                  else setRemove(true);
                 }}
               >
                 <Icon name="trash" size={14} />{preview ? "Auswahl verwerfen" : "Bild entfernen"}
@@ -179,7 +213,8 @@ function ImageUpload({ current }: { current: string | null }) {
             {remove && <button type="button" className="btn ghost small" onClick={() => setRemove(false)}><Icon name="undo" size={14} />Rückgängig</button>}
           </div>
         </div>
-        <input ref={input} type="file" name="image" accept="image/png,image/jpeg,image/webp" hidden onChange={(e) => choose(e.target.files)} />
+        {/* Only a new food sends the file with the form. */}
+        <input ref={input} type="file" name={foodId ? undefined : "image"} accept="image/png,image/jpeg,image/webp" hidden onChange={(e) => choose(e.target.files)} />
         {remove && <input type="hidden" name="remove_image" value="on" />}
       </div>
     </div>
