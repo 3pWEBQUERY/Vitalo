@@ -3,7 +3,7 @@
 import { and, eq, ne } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 import { db, schema } from "@/db";
-import { audit, currentAdmin, hashPassword, matchTotp, newTotpSecret, openSecret, passwordProblem, requireAdmin, sealSecret, twoFactorRequired, verifyPassword } from "@/lib/admin";
+import { audit, currentAdmin, hashPassword, matchTotp, openSecret, passwordProblem, requireAdmin, twoFactorRequired, verifyPassword } from "@/lib/admin";
 
 export type AccountState = { error?: string; done?: string };
 
@@ -20,14 +20,6 @@ export async function changePasswordAction(_: AccountState, formData: FormData):
   if (context) await db.delete(schema.adminSessions).where(and(eq(schema.adminSessions.adminId, admin.id), ne(schema.adminSessions.id, context.sessionId)));
   await audit(admin.id, "admin.password_changed", "admin", admin.id);
   return { done: "Passwort geändert. Andere Sitzungen wurden beendet." };
-}
-
-/** Creates a new, not yet active secret. It becomes active once a code from it is confirmed. */
-export async function startTotpAction() {
-  const admin = await requireAdmin("account");
-  if (admin.totpEnabled) return;
-  await db.update(schema.adminUsers).set({ totpSecret: sealSecret(newTotpSecret()), totpLastStep: null }).where(eq(schema.adminUsers.id, admin.id));
-  revalidatePath("/admin/account");
 }
 
 export async function confirmTotpAction(_: AccountState, formData: FormData): Promise<AccountState> {

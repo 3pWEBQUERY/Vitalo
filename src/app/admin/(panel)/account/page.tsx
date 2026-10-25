@@ -2,9 +2,10 @@ import { desc, eq } from "drizzle-orm";
 import QRCode from "qrcode";
 import { db, schema } from "@/db";
 import { currentAdmin, openSecret, requireAdmin, ROLE_NAMES, totpURI, twoFactorRequired } from "@/lib/admin";
+import { Icon } from "@/components/Icon";
 import { dateTime, relative } from "@/lib/format";
 import { ActionForm, SubmitButton } from "../../components/ui";
-import { endOtherSessionsAction, startTotpAction } from "./actions";
+import { endOtherSessionsAction } from "./actions";
 import { ConfirmTotpForm, DisableTotpForm, PasswordForm } from "./AccountForms";
 
 export const dynamic = "force-dynamic";
@@ -28,7 +29,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
       </div>
       {setup === "2fa" && <div className="alert" role="alert">Bitte zuerst die Zwei-Faktor-Anmeldung einrichten. Danach ist der Admin-Bereich freigeschaltet.</div>}
 
-      <section className="card form-section">
+      <section className="card form-section" id="two-factor">
         <h2>Zwei-Faktor-Anmeldung</h2>
         {admin.totpEnabled ? (
           <>
@@ -51,7 +52,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
         ) : (
           <>
             <p className="sub">Schützt den Admin-Zugang auch dann, wenn das Passwort bekannt wird. {twoFactorRequired() ? "Im Produktivbetrieb Pflicht." : "Im Produktivbetrieb Pflicht, lokal optional."}</p>
-            <ActionForm action={startTotpAction}><SubmitButton className="btn primary" icon="key">Einrichten</SubmitButton></ActionForm>
+            <form method="post" action="/admin/account/start-2fa"><button type="submit" className="btn primary"><Icon name="key" size={16} />Einrichten</button></form>
           </>
         )}
       </section>
