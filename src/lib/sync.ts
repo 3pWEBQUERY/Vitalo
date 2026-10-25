@@ -117,9 +117,18 @@ async function apply<T extends { id: string; deleted?: boolean }>(
   return { applied, rejected };
 }
 
+/** Diary entries may point at foods that only exist on the phone; those links are dropped. */
+async function knownFoodIds(ids: (string | null | undefined)[]): Promise<Set<string>> {
+  const wanted = [...new Set(ids.filter((id): id is string => Boolean(id)))];
+  if (!wanted.length) return new Set();
+  const rows = await db.select({ id: schema.foods.id }).from(schema.foods).where(inArray(schema.foods.id, wanted));
+  return new Set(rows.map((r) => r.id));
+}
+
 export async function push(userId: string, input: PushInput) {
+  const foods = await knownFoodIds(input.meals.map((m) => m.foodId));
   const meals = await apply(schema.mealEntries, userId, input.meals, (m) => ({
-    entryDate: m.entryDate, mealType: m.mealType, status: m.status, foodId: m.foodId ?? null, nameSnapshot: m.name,
+    entryDate: m.entryDate, mealType: m.mealType, status: m.status, foodId: m.foodId && foods.has(m.foodId) ? m.foodId : null, nameSnapshot: m.name,
     quantityG: m.quantityG, servingUnit: m.servingUnit ?? null, servingCount: m.servingCount ?? null, kcal: m.kcal,
     proteinG: m.proteinG ?? null, carbsG: m.carbsG ?? null, fatG: m.fatG ?? null, fiberG: m.fiberG ?? null,
     sugarG: m.sugarG ?? null, saltG: m.saltG ?? null, category: m.category ?? null, source: m.source, aiConfidence: m.aiConfidence ?? null,

@@ -184,6 +184,8 @@ export function foodDTO(food: Food) {
     brand: food.brand,
     barcode: food.barcode,
     imageUrl: publicImageUrl(food.imageUrl),
+    brandIconUrl: food.brandId ? publicImageUrl(`/api/v1/brands/${food.brandId}/icon`) : null,
+    sourceRef: food.sourceRef,
     quality: food.quality,
     source: food.source,
     isPrivate: food.isPrivate,

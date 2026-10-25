@@ -8,6 +8,7 @@ export const users = pgTable("users", {
   id: uuid("id").primaryKey().defaultRandom(),
   appleSub: text("apple_sub").unique(),
   appleRefreshToken: text("apple_refresh_token"),
+  deviceSecretHash: text("device_secret_hash").unique(),
   email: text("email"),
   plan: text("plan", { enum: ["free", "plus"] }).notNull().default("free"),
   planExpiresAt: ts("plan_expires_at"),

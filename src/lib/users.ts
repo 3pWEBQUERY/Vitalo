@@ -10,3 +10,12 @@ export async function findOrCreateUser(appleSub: string, email?: string, display
   await db.insert(schema.profiles).values({ userId: user.id, displayName: displayName ?? null }).onConflictDoNothing();
   return { user, isNew: true };
 }
+
+/** Account bound to this iPhone's Keychain secret; created on first use. */
+export async function findOrCreateDeviceUser(secretHash: string): Promise<{ user: User; isNew: boolean }> {
+  const [existing] = await db.select().from(schema.users).where(eq(schema.users.deviceSecretHash, secretHash)).limit(1);
+  if (existing && !existing.deletedAt) return { user: existing, isNew: false };
+  const [user] = await db.insert(schema.users).values({ deviceSecretHash: secretHash }).returning();
+  await db.insert(schema.profiles).values({ userId: user.id }).onConflictDoNothing();
+  return { user, isNew: true };
+}
