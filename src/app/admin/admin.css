@@ -532,3 +532,7 @@ dialog::backdrop { background: var(--backdrop); animation: fade 0.2s var(--ease)
 .dropzone-preview img { width: 100%; height: 100%; object-fit: contain; }
 .dropzone-text { display: grid; gap: 4px; }
 .dropzone-actions { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+/* Visually hidden but still rendered, so its label opens the picker in every browser. */
+.dropzone .file-input { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; pointer-events: none; }
+.dropzone label.btn { position: relative; cursor: pointer; }
+.dropzone label.btn[aria-disabled="true"] { opacity: 0.5; pointer-events: none; }

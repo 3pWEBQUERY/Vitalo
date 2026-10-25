@@ -198,7 +198,7 @@ export async function signInWithPassword(email: string, password: string): Promi
       .setIssuedAt()
       .setExpirationTime("5m")
       .sign(key("admin-2fa"));
-    (await cookies()).set(PENDING_COOKIE, pending, { httpOnly: true, secure: production(), sameSite: "strict", path: "/admin", maxAge: 300 });
+    (await cookies()).set(PENDING_COOKIE, pending, { httpOnly: true, secure: production(), sameSite: "lax", path: "/admin", maxAge: 300 });
     return { ok: true, needsCode: true };
   }
   await createSession(admin);
@@ -246,7 +246,10 @@ async function createSession(admin: AdminUser): Promise<void> {
     expiresAt: new Date(Date.now() + MAX_MS),
   });
   await db.update(schema.adminUsers).set({ lastLoginAt: new Date(), failedLogins: 0, lockedUntil: null }).where(eq(schema.adminUsers.id, admin.id));
-  (await cookies()).set(SESSION_COOKIE, token, { httpOnly: true, secure: production(), sameSite: "strict", path: "/", maxAge: MAX_MS / 1000 });
+  // Lax, not Strict: Safari withholds Strict cookies from every request of a page that was opened
+  // through a link from another site or app, so server actions arrived signed out. Lax cookies are
+  // still never sent with cross-site POSTs, and actions and admin routes check the Origin as well.
+  (await cookies()).set(SESSION_COOKIE, token, { httpOnly: true, secure: production(), sameSite: "lax", path: "/", maxAge: MAX_MS / 1000 });
   await audit(admin.id, "admin.sign_in", "admin", admin.id, { ip });
 }
 

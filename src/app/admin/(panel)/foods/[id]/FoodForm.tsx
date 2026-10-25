@@ -193,7 +193,11 @@ function ImageUpload({ current, foodId }: { current: string | null; foodId?: str
           <strong>{title}</strong>
           <span className="sub">PNG, JPEG oder WebP bis 5 MB. Hierher ziehen oder auswählen. {foodId ? "Wird sofort gespeichert, " : "Wird beim Speichern hochgeladen, "}verkleinert und ohne Kameradaten abgelegt.</span>
           <div className="dropzone-actions">
-            <button type="button" className="btn secondary small" disabled={busy !== null} onClick={() => input.current?.click()}><Icon name="image" size={14} />Datei wählen</button>
+            {/* A label opens the file picker natively; Safari ignores click() on hidden file inputs in some cases. */}
+            <label className="btn secondary small" aria-disabled={busy !== null}>
+              <Icon name="image" size={14} />Datei wählen
+              <input ref={input} type="file" className="file-input" name={foodId ? undefined : "image"} accept="image/png,image/jpeg,image/webp" disabled={busy !== null} onChange={(e) => choose(e.target.files)} />
+            </label>
             {!busy && (preview || (stored && !remove)) && (
               <button
                 type="button"
@@ -213,8 +217,6 @@ function ImageUpload({ current, foodId }: { current: string | null; foodId?: str
             {remove && <button type="button" className="btn ghost small" onClick={() => setRemove(false)}><Icon name="undo" size={14} />Rückgängig</button>}
           </div>
         </div>
-        {/* Only a new food sends the file with the form. */}
-        <input ref={input} type="file" name={foodId ? undefined : "image"} accept="image/png,image/jpeg,image/webp" hidden onChange={(e) => choose(e.target.files)} />
         {remove && <input type="hidden" name="remove_image" value="on" />}
       </div>
     </div>

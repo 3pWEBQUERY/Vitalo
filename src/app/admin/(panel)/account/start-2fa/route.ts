@@ -8,7 +8,7 @@ import { currentAdmin, newTotpSecret, sealSecret } from "@/lib/admin";
  */
 export async function POST(request: Request) {
   const back = (path: string) => new Response(null, { status: 303, headers: { Location: path } });
-  // Same-origin only: the session cookie is SameSite=Strict, this guards older browsers too.
+  // Same-origin only: the session cookie is SameSite=Lax, this guards older browsers too.
   const origin = request.headers.get("origin");
   const host = request.headers.get("x-forwarded-host") ?? request.headers.get("host");
   if (origin && host && new URL(origin).host !== host) return new Response("Forbidden", { status: 403 });
