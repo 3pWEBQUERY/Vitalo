@@ -78,7 +78,16 @@ wordmark uploads), hidden or deleted.
 
 ## Deploy (Railway)
 
-Set the variables from `.env.example` (at least `DATABASE_URL`, `AUTH_SECRET`, `PUBLIC_URL`,
-`JOB_SECRET`, `ANTHROPIC_API_KEY`, `BRANDFETCH_CLIENT_ID`, bucket and Apple keys). `npm start`
-applies pending migrations, then starts the server. Create the first admin once with
-`railway run npm run create-admin -- --email …`.
+Project **Vitalo** (region Amsterdam) with:
+
+| Service | Purpose |
+| --- | --- |
+| `backend` | This repository, built with Railpack. Before each deploy `npm run release` runs migrations, loads the reference foods and creates the first admin if `ADMIN_BOOTSTRAP_*` is set. Healthcheck: `/api/health`. |
+| `Postgres` | Database; `DATABASE_URL` is referenced from it. |
+| `vitalo-media` | Private bucket for photos and logos (`BUCKET`, `ENDPOINT`, `REGION`, `ACCESS_KEY_ID`, `SECRET_ACCESS_KEY` referenced). |
+| `cron-coach` | 02:00 UTC: `POST /api/internal/jobs/coach` with `X-Job-Secret`. |
+| `cron-maintenance` | 03:00 UTC: `POST /api/internal/jobs/maintenance`. |
+
+Every push to `main` deploys. After the first admin sign-in, remove `ADMIN_BOOTSTRAP_PASSWORD`
+from the backend variables. Still to add when available: `ANTHROPIC_API_KEY`, `BRANDFETCH_CLIENT_ID`,
+the Apple keys (`APPLE_*`, `APNS_*`).
