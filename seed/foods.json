@@ -1,0 +1,2551 @@
+[
+ {
+  "key": "egg",
+  "category": "protein",
+  "kcal": 143.0,
+  "protein": 12.6,
+  "carbs": 0.7,
+  "fat": 9.5,
+  "fiber": 0.0,
+  "sugar": 0.4,
+  "salt": 0.36,
+  "servings": [
+   {
+    "unit": "egg",
+    "grams": 55.0
+   }
+  ],
+  "names": {
+   "en": "Egg, boiled",
+   "de": "Ei, gekocht",
+   "fr": "Œuf dur",
+   "it": "Uovo sodo",
+   "es": "Huevo cocido"
+  },
+  "liquid": false
+ },
+ {
+  "key": "fried_egg",
+  "category": "protein",
+  "kcal": 196.0,
+  "protein": 13.6,
+  "carbs": 0.8,
+  "fat": 15.0,
+  "fiber": 0.0,
+  "sugar": 0.4,
+  "salt": 0.5,
+  "servings": [
+   {
+    "unit": "egg",
+    "grams": 46.0
+   }
+  ],
+  "names": {
+   "en": "Fried egg",
+   "de": "Spiegelei",
+   "fr": "Œuf au plat",
+   "it": "Uovo all'occhio di bue",
+   "es": "Huevo frito"
+  },
+  "liquid": false
+ },
+ {
+  "key": "scrambled_eggs",
+  "category": "protein",
+  "kcal": 149.0,
+  "protein": 10.0,
+  "carbs": 1.6,
+  "fat": 11.0,
+  "fiber": 0.0,
+  "sugar": 1.4,
+  "salt": 0.4,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 120.0
+   }
+  ],
+  "names": {
+   "en": "Scrambled eggs",
+   "de": "Rührei",
+   "fr": "Œufs brouillés",
+   "it": "Uova strapazzate",
+   "es": "Huevos revueltos"
+  },
+  "liquid": false
+ },
+ {
+  "key": "toast",
+  "category": "grain",
+  "kcal": 265.0,
+  "protein": 8.9,
+  "carbs": 49.0,
+  "fat": 3.2,
+  "fiber": 2.7,
+  "sugar": 5.0,
+  "salt": 1.2,
+  "servings": [
+   {
+    "unit": "slice",
+    "grams": 25.0
+   }
+  ],
+  "names": {
+   "en": "Toast",
+   "de": "Toastbrot",
+   "fr": "Pain de mie",
+   "it": "Pane in cassetta",
+   "es": "Pan de molde"
+  },
+  "liquid": false
+ },
+ {
+  "key": "bread",
+  "category": "grain",
+  "kcal": 260.0,
+  "protein": 9.0,
+  "carbs": 50.0,
+  "fat": 3.0,
+  "fiber": 3.5,
+  "sugar": 3.0,
+  "salt": 1.3,
+  "servings": [
+   {
+    "unit": "slice",
+    "grams": 40.0
+   }
+  ],
+  "names": {
+   "en": "Bread",
+   "de": "Brot",
+   "fr": "Pain",
+   "it": "Pane",
+   "es": "Pan"
+  },
+  "liquid": false
+ },
+ {
+  "key": "bread_whole",
+  "category": "grain",
+  "kcal": 247.0,
+  "protein": 13.0,
+  "carbs": 41.0,
+  "fat": 3.4,
+  "fiber": 7.0,
+  "sugar": 6.0,
+  "salt": 1.1,
+  "servings": [
+   {
+    "unit": "slice",
+    "grams": 45.0
+   }
+  ],
+  "names": {
+   "en": "Whole grain bread",
+   "de": "Vollkornbrot",
+   "fr": "Pain complet",
+   "it": "Pane integrale",
+   "es": "Pan integral"
+  },
+  "liquid": false
+ },
+ {
+  "key": "zopf",
+  "category": "grain",
+  "kcal": 290.0,
+  "protein": 9.0,
+  "carbs": 46.0,
+  "fat": 8.0,
+  "fiber": 2.0,
+  "sugar": 4.0,
+  "salt": 1.3,
+  "servings": [
+   {
+    "unit": "slice",
+    "grams": 40.0
+   }
+  ],
+  "names": {
+   "en": "Braided bread (Zopf)",
+   "de": "Zopf",
+   "fr": "Tresse",
+   "it": "Treccia",
+   "es": "Pan trenzado"
+  },
+  "liquid": false
+ },
+ {
+  "key": "croissant",
+  "category": "grain",
+  "kcal": 406.0,
+  "protein": 8.2,
+  "carbs": 45.8,
+  "fat": 21.0,
+  "fiber": 2.6,
+  "sugar": 11.0,
+  "salt": 0.9,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 60.0
+   }
+  ],
+  "names": {
+   "en": "Croissant",
+   "de": "Croissant",
+   "fr": "Croissant",
+   "it": "Cornetto",
+   "es": "Cruasán",
+   "de-CH": "Gipfeli"
+  },
+  "liquid": false
+ },
+ {
+  "key": "pancakes",
+  "category": "grain",
+  "kcal": 227.0,
+  "protein": 6.4,
+  "carbs": 28.0,
+  "fat": 9.7,
+  "fiber": 1.0,
+  "sugar": 6.0,
+  "salt": 0.7,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 60.0
+   }
+  ],
+  "names": {
+   "en": "Pancake",
+   "de": "Pfannkuchen",
+   "fr": "Pancake",
+   "it": "Pancake",
+   "es": "Tortita",
+   "de-CH": "Omelette (Pfannkuchen)"
+  },
+  "liquid": false
+ },
+ {
+  "key": "butter",
+  "category": "fat",
+  "kcal": 717.0,
+  "protein": 0.9,
+  "carbs": 0.1,
+  "fat": 81.0,
+  "fiber": 0.0,
+  "sugar": 0.1,
+  "salt": 0.02,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 10.0
+   },
+   {
+    "unit": "tbsp",
+    "grams": 14.0
+   }
+  ],
+  "names": {
+   "en": "Butter",
+   "de": "Butter",
+   "fr": "Beurre",
+   "it": "Burro",
+   "es": "Mantequilla"
+  },
+  "liquid": false
+ },
+ {
+  "key": "jam",
+  "category": "sweet",
+  "kcal": 250.0,
+  "protein": 0.4,
+  "carbs": 62.0,
+  "fat": 0.1,
+  "fiber": 1.0,
+  "sugar": 49.0,
+  "salt": 0.03,
+  "servings": [
+   {
+    "unit": "tbsp",
+    "grams": 20.0
+   }
+  ],
+  "names": {
+   "en": "Jam",
+   "de": "Konfitüre",
+   "fr": "Confiture",
+   "it": "Marmellata",
+   "es": "Mermelada"
+  },
+  "liquid": false
+ },
+ {
+  "key": "honey",
+  "category": "sweet",
+  "kcal": 304.0,
+  "protein": 0.3,
+  "carbs": 82.0,
+  "fat": 0.0,
+  "fiber": 0.2,
+  "sugar": 82.0,
+  "salt": 0.01,
+  "servings": [
+   {
+    "unit": "tsp",
+    "grams": 7.0
+   },
+   {
+    "unit": "tbsp",
+    "grams": 21.0
+   }
+  ],
+  "names": {
+   "en": "Honey",
+   "de": "Honig",
+   "fr": "Miel",
+   "it": "Miele",
+   "es": "Miel"
+  },
+  "liquid": false
+ },
+ {
+  "key": "muesli",
+  "category": "grain",
+  "kcal": 367.0,
+  "protein": 10.0,
+  "carbs": 66.0,
+  "fat": 6.0,
+  "fiber": 8.0,
+  "sugar": 15.0,
+  "salt": 0.1,
+  "servings": [
+   {
+    "unit": "bowl",
+    "grams": 60.0
+   }
+  ],
+  "names": {
+   "en": "Muesli",
+   "de": "Müsli",
+   "fr": "Muesli",
+   "it": "Muesli",
+   "es": "Muesli",
+   "de-CH": "Müesli"
+  },
+  "liquid": false
+ },
+ {
+  "key": "bircher",
+  "category": "dish",
+  "kcal": 120.0,
+  "protein": 3.5,
+  "carbs": 17.0,
+  "fat": 4.0,
+  "fiber": 2.5,
+  "sugar": 9.0,
+  "salt": 0.1,
+  "servings": [
+   {
+    "unit": "bowl",
+    "grams": 250.0
+   }
+  ],
+  "names": {
+   "en": "Bircher muesli",
+   "de": "Birchermüsli",
+   "fr": "Bircher muesli",
+   "it": "Bircher muesli",
+   "es": "Muesli Bircher",
+   "de-CH": "Birchermüesli"
+  },
+  "liquid": false
+ },
+ {
+  "key": "oats",
+  "category": "grain",
+  "kcal": 379.0,
+  "protein": 13.0,
+  "carbs": 68.0,
+  "fat": 6.5,
+  "fiber": 10.0,
+  "sugar": 1.0,
+  "salt": 0.01,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 50.0
+   }
+  ],
+  "names": {
+   "en": "Rolled oats",
+   "de": "Haferflocken",
+   "fr": "Flocons d'avoine",
+   "it": "Fiocchi d'avena",
+   "es": "Copos de avena"
+  },
+  "liquid": false
+ },
+ {
+  "key": "cornflakes",
+  "category": "grain",
+  "kcal": 357.0,
+  "protein": 7.5,
+  "carbs": 84.0,
+  "fat": 0.4,
+  "fiber": 3.0,
+  "sugar": 9.5,
+  "salt": 1.8,
+  "servings": [
+   {
+    "unit": "bowl",
+    "grams": 30.0
+   }
+  ],
+  "names": {
+   "en": "Cornflakes",
+   "de": "Cornflakes",
+   "fr": "Corn flakes",
+   "it": "Corn flakes",
+   "es": "Copos de maíz"
+  },
+  "liquid": false
+ },
+ {
+  "key": "yogurt",
+  "category": "dairy",
+  "kcal": 61.0,
+  "protein": 3.5,
+  "carbs": 4.7,
+  "fat": 3.3,
+  "fiber": 0.0,
+  "sugar": 4.7,
+  "salt": 0.1,
+  "servings": [
+   {
+    "unit": "cup",
+    "grams": 180.0
+   }
+  ],
+  "names": {
+   "en": "Plain yogurt",
+   "de": "Naturjoghurt",
+   "fr": "Yaourt nature",
+   "it": "Yogurt bianco",
+   "es": "Yogur natural",
+   "de-CH": "Joghurt nature"
+  },
+  "liquid": false
+ },
+ {
+  "key": "greek_yogurt",
+  "category": "dairy",
+  "kcal": 73.0,
+  "protein": 9.9,
+  "carbs": 3.9,
+  "fat": 1.9,
+  "fiber": 0.0,
+  "sugar": 3.6,
+  "salt": 0.09,
+  "servings": [
+   {
+    "unit": "cup",
+    "grams": 170.0
+   }
+  ],
+  "names": {
+   "en": "Greek yogurt, 2 %",
+   "de": "Griechischer Joghurt, 2 %",
+   "fr": "Yaourt grec, 2 %",
+   "it": "Yogurt greco, 2 %",
+   "es": "Yogur griego, 2 %"
+  },
+  "liquid": false
+ },
+ {
+  "key": "quark",
+  "category": "dairy",
+  "kcal": 67.0,
+  "protein": 12.0,
+  "carbs": 4.0,
+  "fat": 0.2,
+  "fiber": 0.0,
+  "sugar": 4.0,
+  "salt": 0.1,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 125.0
+   }
+  ],
+  "names": {
+   "en": "Low-fat quark",
+   "de": "Magerquark",
+   "fr": "Séré maigre",
+   "it": "Quark magro",
+   "es": "Quark desnatado"
+  },
+  "liquid": false
+ },
+ {
+  "key": "cottage_cheese",
+  "category": "dairy",
+  "kcal": 98.0,
+  "protein": 11.0,
+  "carbs": 3.4,
+  "fat": 4.3,
+  "fiber": 0.0,
+  "sugar": 2.7,
+  "salt": 0.9,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 100.0
+   }
+  ],
+  "names": {
+   "en": "Cottage cheese",
+   "de": "Hüttenkäse",
+   "fr": "Cottage cheese",
+   "it": "Fiocchi di latte",
+   "es": "Requesón"
+  },
+  "liquid": false
+ },
+ {
+  "key": "milk",
+  "category": "dairy",
+  "kcal": 64.0,
+  "protein": 3.3,
+  "carbs": 4.8,
+  "fat": 3.5,
+  "fiber": 0.0,
+  "sugar": 4.8,
+  "salt": 0.1,
+  "servings": [
+   {
+    "unit": "glass",
+    "grams": 200.0
+   }
+  ],
+  "names": {
+   "en": "Milk",
+   "de": "Milch",
+   "fr": "Lait",
+   "it": "Latte",
+   "es": "Leche"
+  },
+  "liquid": true
+ },
+ {
+  "key": "oat_drink",
+  "category": "drink",
+  "kcal": 45.0,
+  "protein": 0.5,
+  "carbs": 6.6,
+  "fat": 1.5,
+  "fiber": 0.8,
+  "sugar": 4.0,
+  "salt": 0.1,
+  "servings": [
+   {
+    "unit": "glass",
+    "grams": 200.0
+   }
+  ],
+  "names": {
+   "en": "Oat drink",
+   "de": "Haferdrink",
+   "fr": "Boisson à l'avoine",
+   "it": "Bevanda all'avena",
+   "es": "Bebida de avena"
+  },
+  "liquid": true
+ },
+ {
+  "key": "emmental",
+  "category": "dairy",
+  "kcal": 380.0,
+  "protein": 28.0,
+  "carbs": 0.0,
+  "fat": 30.0,
+  "fiber": 0.0,
+  "sugar": 0.0,
+  "salt": 0.4,
+  "servings": [
+   {
+    "unit": "slice",
+    "grams": 20.0
+   }
+  ],
+  "names": {
+   "en": "Emmental cheese",
+   "de": "Emmentaler",
+   "fr": "Emmental",
+   "it": "Emmental",
+   "es": "Queso emmental"
+  },
+  "liquid": false
+ },
+ {
+  "key": "gruyere",
+  "category": "dairy",
+  "kcal": 413.0,
+  "protein": 29.8,
+  "carbs": 0.4,
+  "fat": 32.3,
+  "fiber": 0.0,
+  "sugar": 0.4,
+  "salt": 1.7,
+  "servings": [
+   {
+    "unit": "slice",
+    "grams": 20.0
+   }
+  ],
+  "names": {
+   "en": "Gruyère cheese",
+   "de": "Gruyère",
+   "fr": "Gruyère",
+   "it": "Groviera",
+   "es": "Queso gruyère"
+  },
+  "liquid": false
+ },
+ {
+  "key": "mozzarella",
+  "category": "dairy",
+  "kcal": 254.0,
+  "protein": 18.0,
+  "carbs": 1.0,
+  "fat": 19.5,
+  "fiber": 0.0,
+  "sugar": 1.0,
+  "salt": 0.5,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 125.0
+   }
+  ],
+  "names": {
+   "en": "Mozzarella",
+   "de": "Mozzarella",
+   "fr": "Mozzarella",
+   "it": "Mozzarella",
+   "es": "Mozzarella"
+  },
+  "liquid": false
+ },
+ {
+  "key": "feta",
+  "category": "dairy",
+  "kcal": 264.0,
+  "protein": 14.0,
+  "carbs": 4.0,
+  "fat": 21.0,
+  "fiber": 0.0,
+  "sugar": 4.0,
+  "salt": 2.7,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 50.0
+   }
+  ],
+  "names": {
+   "en": "Feta",
+   "de": "Feta",
+   "fr": "Feta",
+   "it": "Feta",
+   "es": "Queso feta"
+  },
+  "liquid": false
+ },
+ {
+  "key": "cream_cheese",
+  "category": "dairy",
+  "kcal": 253.0,
+  "protein": 5.9,
+  "carbs": 4.1,
+  "fat": 23.0,
+  "fiber": 0.0,
+  "sugar": 3.2,
+  "salt": 0.75,
+  "servings": [
+   {
+    "unit": "tbsp",
+    "grams": 20.0
+   }
+  ],
+  "names": {
+   "en": "Cream cheese",
+   "de": "Frischkäse",
+   "fr": "Fromage frais",
+   "it": "Formaggio spalmabile",
+   "es": "Queso crema"
+  },
+  "liquid": false
+ },
+ {
+  "key": "raclette",
+  "category": "dairy",
+  "kcal": 357.0,
+  "protein": 24.0,
+  "carbs": 0.0,
+  "fat": 28.5,
+  "fiber": 0.0,
+  "sugar": 0.0,
+  "salt": 1.9,
+  "servings": [
+   {
+    "unit": "slice",
+    "grams": 30.0
+   },
+   {
+    "unit": "portion",
+    "grams": 200.0
+   }
+  ],
+  "names": {
+   "en": "Raclette cheese",
+   "de": "Raclettekäse",
+   "fr": "Fromage à raclette",
+   "it": "Formaggio da raclette",
+   "es": "Queso raclette"
+  },
+  "liquid": false
+ },
+ {
+  "key": "fondue",
+  "category": "dish",
+  "kcal": 230.0,
+  "protein": 14.0,
+  "carbs": 4.0,
+  "fat": 16.0,
+  "fiber": 0.0,
+  "sugar": 1.0,
+  "salt": 1.2,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 250.0
+   }
+  ],
+  "names": {
+   "en": "Cheese fondue",
+   "de": "Käsefondue",
+   "fr": "Fondue au fromage",
+   "it": "Fonduta di formaggio",
+   "es": "Fondue de queso"
+  },
+  "liquid": false
+ },
+ {
+  "key": "ham",
+  "category": "protein",
+  "kcal": 107.0,
+  "protein": 19.0,
+  "carbs": 1.0,
+  "fat": 3.0,
+  "fiber": 0.0,
+  "sugar": 1.0,
+  "salt": 2.2,
+  "servings": [
+   {
+    "unit": "slice",
+    "grams": 15.0
+   }
+  ],
+  "names": {
+   "en": "Cooked ham",
+   "de": "Kochschinken",
+   "fr": "Jambon cuit",
+   "it": "Prosciutto cotto",
+   "es": "Jamón cocido",
+   "de-CH": "Schinken"
+  },
+  "liquid": false
+ },
+ {
+  "key": "salami",
+  "category": "protein",
+  "kcal": 407.0,
+  "protein": 22.0,
+  "carbs": 1.0,
+  "fat": 35.0,
+  "fiber": 0.0,
+  "sugar": 1.0,
+  "salt": 4.5,
+  "servings": [
+   {
+    "unit": "slice",
+    "grams": 10.0
+   }
+  ],
+  "names": {
+   "en": "Salami",
+   "de": "Salami",
+   "fr": "Salami",
+   "it": "Salame",
+   "es": "Salami"
+  },
+  "liquid": false
+ },
+ {
+  "key": "chicken_breast",
+  "category": "protein",
+  "kcal": 165.0,
+  "protein": 31.0,
+  "carbs": 0.0,
+  "fat": 3.6,
+  "fiber": 0.0,
+  "sugar": 0.0,
+  "salt": 0.2,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 150.0
+   }
+  ],
+  "names": {
+   "en": "Chicken breast, cooked",
+   "de": "Hähnchenbrust, gegart",
+   "fr": "Blanc de poulet, cuit",
+   "it": "Petto di pollo, cotto",
+   "es": "Pechuga de pollo, cocida",
+   "de-CH": "Pouletbrust, gegart"
+  },
+  "liquid": false
+ },
+ {
+  "key": "beef_steak",
+  "category": "protein",
+  "kcal": 217.0,
+  "protein": 26.0,
+  "carbs": 0.0,
+  "fat": 12.0,
+  "fiber": 0.0,
+  "sugar": 0.0,
+  "salt": 0.15,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 180.0
+   }
+  ],
+  "names": {
+   "en": "Beef steak, cooked",
+   "de": "Rindssteak, gebraten",
+   "fr": "Steak de bœuf, cuit",
+   "it": "Bistecca di manzo, cotta",
+   "es": "Filete de ternera, cocinado"
+  },
+  "liquid": false
+ },
+ {
+  "key": "ground_beef",
+  "category": "protein",
+  "kcal": 250.0,
+  "protein": 25.0,
+  "carbs": 0.0,
+  "fat": 16.0,
+  "fiber": 0.0,
+  "sugar": 0.0,
+  "salt": 0.2,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 125.0
+   }
+  ],
+  "names": {
+   "en": "Ground beef, cooked",
+   "de": "Rinderhackfleisch, gebraten",
+   "fr": "Bœuf haché, cuit",
+   "it": "Carne macinata di manzo, cotta",
+   "es": "Carne picada de ternera, cocinada",
+   "de-CH": "Rindshackfleisch, gebraten"
+  },
+  "liquid": false
+ },
+ {
+  "key": "bratwurst",
+  "category": "protein",
+  "kcal": 268.0,
+  "protein": 13.0,
+  "carbs": 1.0,
+  "fat": 24.0,
+  "fiber": 0.0,
+  "sugar": 0.5,
+  "salt": 1.8,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 130.0
+   }
+  ],
+  "names": {
+   "en": "Bratwurst",
+   "de": "Bratwurst",
+   "fr": "Saucisse à rôtir",
+   "it": "Salsiccia arrosto",
+   "es": "Salchicha bratwurst"
+  },
+  "liquid": false
+ },
+ {
+  "key": "salmon",
+  "category": "protein",
+  "kcal": 206.0,
+  "protein": 22.0,
+  "carbs": 0.0,
+  "fat": 13.0,
+  "fiber": 0.0,
+  "sugar": 0.0,
+  "salt": 0.15,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 150.0
+   }
+  ],
+  "names": {
+   "en": "Salmon, cooked",
+   "de": "Lachs, gegart",
+   "fr": "Saumon, cuit",
+   "it": "Salmone, cotto",
+   "es": "Salmón, cocinado"
+  },
+  "liquid": false
+ },
+ {
+  "key": "tuna",
+  "category": "protein",
+  "kcal": 116.0,
+  "protein": 26.0,
+  "carbs": 0.0,
+  "fat": 1.0,
+  "fiber": 0.0,
+  "sugar": 0.0,
+  "salt": 0.8,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 130.0
+   }
+  ],
+  "names": {
+   "en": "Tuna in water",
+   "de": "Thunfisch im eigenen Saft",
+   "fr": "Thon au naturel",
+   "it": "Tonno al naturale",
+   "es": "Atún al natural"
+  },
+  "liquid": false
+ },
+ {
+  "key": "shrimp",
+  "category": "protein",
+  "kcal": 99.0,
+  "protein": 24.0,
+  "carbs": 0.2,
+  "fat": 0.3,
+  "fiber": 0.0,
+  "sugar": 0.0,
+  "salt": 0.6,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 100.0
+   }
+  ],
+  "names": {
+   "en": "Shrimp, cooked",
+   "de": "Garnelen, gegart",
+   "fr": "Crevettes, cuites",
+   "it": "Gamberi, cotti",
+   "es": "Gambas, cocidas",
+   "de-CH": "Crevetten, gegart"
+  },
+  "liquid": false
+ },
+ {
+  "key": "tofu",
+  "category": "protein",
+  "kcal": 144.0,
+  "protein": 15.6,
+  "carbs": 2.3,
+  "fat": 8.7,
+  "fiber": 2.3,
+  "sugar": 0.6,
+  "salt": 0.02,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 125.0
+   }
+  ],
+  "names": {
+   "en": "Tofu",
+   "de": "Tofu",
+   "fr": "Tofu",
+   "it": "Tofu",
+   "es": "Tofu"
+  },
+  "liquid": false
+ },
+ {
+  "key": "lentils",
+  "category": "legume",
+  "kcal": 116.0,
+  "protein": 9.0,
+  "carbs": 20.0,
+  "fat": 0.4,
+  "fiber": 8.0,
+  "sugar": 1.8,
+  "salt": 0.01,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 150.0
+   }
+  ],
+  "names": {
+   "en": "Lentils, cooked",
+   "de": "Linsen, gekocht",
+   "fr": "Lentilles, cuites",
+   "it": "Lenticchie, cotte",
+   "es": "Lentejas, cocidas"
+  },
+  "liquid": false
+ },
+ {
+  "key": "chickpeas",
+  "category": "legume",
+  "kcal": 164.0,
+  "protein": 8.9,
+  "carbs": 27.0,
+  "fat": 2.6,
+  "fiber": 7.6,
+  "sugar": 4.8,
+  "salt": 0.02,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 150.0
+   }
+  ],
+  "names": {
+   "en": "Chickpeas, cooked",
+   "de": "Kichererbsen, gekocht",
+   "fr": "Pois chiches, cuits",
+   "it": "Ceci, cotti",
+   "es": "Garbanzos, cocidos"
+  },
+  "liquid": false
+ },
+ {
+  "key": "hummus",
+  "category": "legume",
+  "kcal": 166.0,
+  "protein": 7.9,
+  "carbs": 14.3,
+  "fat": 9.6,
+  "fiber": 6.0,
+  "sugar": 0.3,
+  "salt": 0.9,
+  "servings": [
+   {
+    "unit": "tbsp",
+    "grams": 30.0
+   }
+  ],
+  "names": {
+   "en": "Hummus",
+   "de": "Hummus",
+   "fr": "Houmous",
+   "it": "Hummus",
+   "es": "Hummus"
+  },
+  "liquid": false
+ },
+ {
+  "key": "falafel",
+  "category": "legume",
+  "kcal": 333.0,
+  "protein": 13.0,
+  "carbs": 32.0,
+  "fat": 18.0,
+  "fiber": 5.0,
+  "sugar": 2.0,
+  "salt": 0.8,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 25.0
+   },
+   {
+    "unit": "portion",
+    "grams": 150.0
+   }
+  ],
+  "names": {
+   "en": "Falafel",
+   "de": "Falafel",
+   "fr": "Falafel",
+   "it": "Falafel",
+   "es": "Falafel"
+  },
+  "liquid": false
+ },
+ {
+  "key": "rice",
+  "category": "grain",
+  "kcal": 130.0,
+  "protein": 2.7,
+  "carbs": 28.0,
+  "fat": 0.3,
+  "fiber": 0.4,
+  "sugar": 0.1,
+  "salt": 0.01,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 180.0
+   }
+  ],
+  "names": {
+   "en": "Rice, cooked",
+   "de": "Reis, gekocht",
+   "fr": "Riz, cuit",
+   "it": "Riso, cotto",
+   "es": "Arroz, cocido"
+  },
+  "liquid": false
+ },
+ {
+  "key": "pasta",
+  "category": "grain",
+  "kcal": 158.0,
+  "protein": 5.8,
+  "carbs": 31.0,
+  "fat": 0.9,
+  "fiber": 1.8,
+  "sugar": 0.6,
+  "salt": 0.01,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 200.0
+   }
+  ],
+  "names": {
+   "en": "Pasta, cooked",
+   "de": "Nudeln, gekocht",
+   "fr": "Pâtes, cuites",
+   "it": "Pasta, cotta",
+   "es": "Pasta, cocida",
+   "de-CH": "Teigwaren, gekocht"
+  },
+  "liquid": false
+ },
+ {
+  "key": "potatoes",
+  "category": "vegetable",
+  "kcal": 87.0,
+  "protein": 1.9,
+  "carbs": 20.0,
+  "fat": 0.1,
+  "fiber": 1.8,
+  "sugar": 0.9,
+  "salt": 0.01,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 90.0
+   },
+   {
+    "unit": "portion",
+    "grams": 200.0
+   }
+  ],
+  "names": {
+   "en": "Potatoes, boiled",
+   "de": "Kartoffeln, gekocht",
+   "fr": "Pommes de terre, cuites",
+   "it": "Patate, lesse",
+   "es": "Patatas, cocidas",
+   "de-CH": "Kartoffeln, gekocht"
+  },
+  "liquid": false
+ },
+ {
+  "key": "fries",
+  "category": "grain",
+  "kcal": 312.0,
+  "protein": 3.4,
+  "carbs": 41.0,
+  "fat": 15.0,
+  "fiber": 3.8,
+  "sugar": 0.3,
+  "salt": 0.5,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 150.0
+   }
+  ],
+  "names": {
+   "en": "French fries",
+   "de": "Pommes frites",
+   "fr": "Frites",
+   "it": "Patatine fritte",
+   "es": "Patatas fritas"
+  },
+  "liquid": false
+ },
+ {
+  "key": "rosti",
+  "category": "dish",
+  "kcal": 170.0,
+  "protein": 2.5,
+  "carbs": 20.0,
+  "fat": 9.0,
+  "fiber": 2.0,
+  "sugar": 0.5,
+  "salt": 0.8,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 200.0
+   }
+  ],
+  "names": {
+   "en": "Rösti",
+   "de": "Rösti",
+   "fr": "Rösti",
+   "it": "Rösti",
+   "es": "Rösti"
+  },
+  "liquid": false
+ },
+ {
+  "key": "quinoa",
+  "category": "grain",
+  "kcal": 120.0,
+  "protein": 4.4,
+  "carbs": 21.0,
+  "fat": 1.9,
+  "fiber": 2.8,
+  "sugar": 0.9,
+  "salt": 0.01,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 150.0
+   }
+  ],
+  "names": {
+   "en": "Quinoa, cooked",
+   "de": "Quinoa, gekocht",
+   "fr": "Quinoa, cuit",
+   "it": "Quinoa, cotta",
+   "es": "Quinoa, cocida"
+  },
+  "liquid": false
+ },
+ {
+  "key": "couscous",
+  "category": "grain",
+  "kcal": 112.0,
+  "protein": 3.8,
+  "carbs": 23.0,
+  "fat": 0.2,
+  "fiber": 1.4,
+  "sugar": 0.1,
+  "salt": 0.01,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 150.0
+   }
+  ],
+  "names": {
+   "en": "Couscous, cooked",
+   "de": "Couscous, gekocht",
+   "fr": "Couscous, cuit",
+   "it": "Cuscus, cotto",
+   "es": "Cuscús, cocido"
+  },
+  "liquid": false
+ },
+ {
+  "key": "pizza",
+  "category": "dish",
+  "kcal": 266.0,
+  "protein": 11.0,
+  "carbs": 33.0,
+  "fat": 10.0,
+  "fiber": 2.3,
+  "sugar": 3.6,
+  "salt": 1.3,
+  "servings": [
+   {
+    "unit": "slice",
+    "grams": 110.0
+   },
+   {
+    "unit": "portion",
+    "grams": 330.0
+   }
+  ],
+  "names": {
+   "en": "Pizza Margherita",
+   "de": "Pizza Margherita",
+   "fr": "Pizza Margherita",
+   "it": "Pizza Margherita",
+   "es": "Pizza Margarita"
+  },
+  "liquid": false
+ },
+ {
+  "key": "burger",
+  "category": "dish",
+  "kcal": 254.0,
+  "protein": 13.0,
+  "carbs": 24.0,
+  "fat": 12.0,
+  "fiber": 1.5,
+  "sugar": 5.0,
+  "salt": 1.2,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 220.0
+   }
+  ],
+  "names": {
+   "en": "Hamburger",
+   "de": "Hamburger",
+   "fr": "Hamburger",
+   "it": "Hamburger",
+   "es": "Hamburguesa"
+  },
+  "liquid": false
+ },
+ {
+  "key": "sandwich",
+  "category": "dish",
+  "kcal": 260.0,
+  "protein": 14.0,
+  "carbs": 26.0,
+  "fat": 11.0,
+  "fiber": 2.0,
+  "sugar": 3.0,
+  "salt": 1.6,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 180.0
+   }
+  ],
+  "names": {
+   "en": "Ham and cheese sandwich",
+   "de": "Schinken-Käse-Sandwich",
+   "fr": "Sandwich jambon-fromage",
+   "it": "Panino prosciutto e formaggio",
+   "es": "Sándwich de jamón y queso"
+  },
+  "liquid": false
+ },
+ {
+  "key": "kebab",
+  "category": "dish",
+  "kcal": 215.0,
+  "protein": 12.0,
+  "carbs": 20.0,
+  "fat": 9.5,
+  "fiber": 1.5,
+  "sugar": 2.5,
+  "salt": 1.2,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 350.0
+   }
+  ],
+  "names": {
+   "en": "Döner kebab",
+   "de": "Döner Kebab",
+   "fr": "Kebab",
+   "it": "Kebab",
+   "es": "Kebab"
+  },
+  "liquid": false
+ },
+ {
+  "key": "sushi",
+  "category": "dish",
+  "kcal": 150.0,
+  "protein": 6.0,
+  "carbs": 28.0,
+  "fat": 1.5,
+  "fiber": 0.8,
+  "sugar": 5.0,
+  "salt": 1.0,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 30.0
+   },
+   {
+    "unit": "portion",
+    "grams": 240.0
+   }
+  ],
+  "names": {
+   "en": "Sushi",
+   "de": "Sushi",
+   "fr": "Sushi",
+   "it": "Sushi",
+   "es": "Sushi"
+  },
+  "liquid": false
+ },
+ {
+  "key": "bolognese",
+  "category": "dish",
+  "kcal": 132.0,
+  "protein": 6.4,
+  "carbs": 16.0,
+  "fat": 4.6,
+  "fiber": 1.8,
+  "sugar": 2.8,
+  "salt": 0.6,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 350.0
+   }
+  ],
+  "names": {
+   "en": "Spaghetti bolognese",
+   "de": "Spaghetti Bolognese",
+   "fr": "Spaghetti bolognaise",
+   "it": "Spaghetti alla bolognese",
+   "es": "Espaguetis a la boloñesa"
+  },
+  "liquid": false
+ },
+ {
+  "key": "lasagna",
+  "category": "dish",
+  "kcal": 135.0,
+  "protein": 7.6,
+  "carbs": 12.0,
+  "fat": 6.2,
+  "fiber": 1.2,
+  "sugar": 2.5,
+  "salt": 0.8,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 300.0
+   }
+  ],
+  "names": {
+   "en": "Lasagna",
+   "de": "Lasagne",
+   "fr": "Lasagnes",
+   "it": "Lasagne",
+   "es": "Lasaña"
+  },
+  "liquid": false
+ },
+ {
+  "key": "chicken_curry",
+  "category": "dish",
+  "kcal": 135.0,
+  "protein": 11.0,
+  "carbs": 5.0,
+  "fat": 8.0,
+  "fiber": 1.2,
+  "sugar": 2.5,
+  "salt": 0.8,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 300.0
+   }
+  ],
+  "names": {
+   "en": "Chicken curry",
+   "de": "Hähnchencurry",
+   "fr": "Curry de poulet",
+   "it": "Pollo al curry",
+   "es": "Pollo al curry",
+   "de-CH": "Pouletcurry"
+  },
+  "liquid": false
+ },
+ {
+  "key": "vegetable_soup",
+  "category": "dish",
+  "kcal": 35.0,
+  "protein": 1.3,
+  "carbs": 5.5,
+  "fat": 0.9,
+  "fiber": 1.2,
+  "sugar": 2.0,
+  "salt": 0.7,
+  "servings": [
+   {
+    "unit": "bowl",
+    "grams": 300.0
+   }
+  ],
+  "names": {
+   "en": "Vegetable soup",
+   "de": "Gemüsesuppe",
+   "fr": "Soupe de légumes",
+   "it": "Minestrone",
+   "es": "Sopa de verduras"
+  },
+  "liquid": false
+ },
+ {
+  "key": "mixed_salad",
+  "category": "vegetable",
+  "kcal": 17.0,
+  "protein": 1.3,
+  "carbs": 2.9,
+  "fat": 0.2,
+  "fiber": 1.8,
+  "sugar": 1.5,
+  "salt": 0.03,
+  "servings": [
+   {
+    "unit": "bowl",
+    "grams": 100.0
+   }
+  ],
+  "names": {
+   "en": "Mixed salad",
+   "de": "Gemischter Salat",
+   "fr": "Salade mêlée",
+   "it": "Insalata mista",
+   "es": "Ensalada mixta"
+  },
+  "liquid": false
+ },
+ {
+  "key": "dressing",
+  "category": "fat",
+  "kcal": 300.0,
+  "protein": 0.0,
+  "carbs": 3.0,
+  "fat": 31.0,
+  "fiber": 0.0,
+  "sugar": 2.0,
+  "salt": 2.0,
+  "servings": [
+   {
+    "unit": "tbsp",
+    "grams": 15.0
+   }
+  ],
+  "names": {
+   "en": "Vinaigrette",
+   "de": "Salatsauce",
+   "fr": "Vinaigrette",
+   "it": "Condimento per insalata",
+   "es": "Vinagreta"
+  },
+  "liquid": false
+ },
+ {
+  "key": "tomato",
+  "category": "vegetable",
+  "kcal": 18.0,
+  "protein": 0.9,
+  "carbs": 3.9,
+  "fat": 0.2,
+  "fiber": 1.2,
+  "sugar": 2.6,
+  "salt": 0.01,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 120.0
+   }
+  ],
+  "names": {
+   "en": "Tomato",
+   "de": "Tomate",
+   "fr": "Tomate",
+   "it": "Pomodoro",
+   "es": "Tomate"
+  },
+  "liquid": false
+ },
+ {
+  "key": "cucumber",
+  "category": "vegetable",
+  "kcal": 15.0,
+  "protein": 0.7,
+  "carbs": 3.6,
+  "fat": 0.1,
+  "fiber": 0.5,
+  "sugar": 1.7,
+  "salt": 0.01,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 100.0
+   },
+   {
+    "unit": "piece",
+    "grams": 300.0
+   }
+  ],
+  "names": {
+   "en": "Cucumber",
+   "de": "Gurke",
+   "fr": "Concombre",
+   "it": "Cetriolo",
+   "es": "Pepino"
+  },
+  "liquid": false
+ },
+ {
+  "key": "carrot",
+  "category": "vegetable",
+  "kcal": 41.0,
+  "protein": 0.9,
+  "carbs": 9.6,
+  "fat": 0.2,
+  "fiber": 2.8,
+  "sugar": 4.7,
+  "salt": 0.17,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 70.0
+   }
+  ],
+  "names": {
+   "en": "Carrot",
+   "de": "Karotte",
+   "fr": "Carotte",
+   "it": "Carota",
+   "es": "Zanahoria",
+   "de-CH": "Rüebli"
+  },
+  "liquid": false
+ },
+ {
+  "key": "broccoli",
+  "category": "vegetable",
+  "kcal": 34.0,
+  "protein": 2.8,
+  "carbs": 6.6,
+  "fat": 0.4,
+  "fiber": 2.6,
+  "sugar": 1.7,
+  "salt": 0.08,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 150.0
+   }
+  ],
+  "names": {
+   "en": "Broccoli",
+   "de": "Brokkoli",
+   "fr": "Brocoli",
+   "it": "Broccoli",
+   "es": "Brócoli",
+   "de-CH": "Broccoli"
+  },
+  "liquid": false
+ },
+ {
+  "key": "bell_pepper",
+  "category": "vegetable",
+  "kcal": 31.0,
+  "protein": 1.0,
+  "carbs": 6.0,
+  "fat": 0.3,
+  "fiber": 2.1,
+  "sugar": 4.2,
+  "salt": 0.01,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 160.0
+   }
+  ],
+  "names": {
+   "en": "Bell pepper",
+   "de": "Paprika",
+   "fr": "Poivron",
+   "it": "Peperone",
+   "es": "Pimiento",
+   "de-CH": "Peperoni"
+  },
+  "liquid": false
+ },
+ {
+  "key": "zucchini",
+  "category": "vegetable",
+  "kcal": 17.0,
+  "protein": 1.2,
+  "carbs": 3.1,
+  "fat": 0.3,
+  "fiber": 1.0,
+  "sugar": 2.5,
+  "salt": 0.02,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 200.0
+   }
+  ],
+  "names": {
+   "en": "Zucchini",
+   "de": "Zucchini",
+   "fr": "Courgette",
+   "it": "Zucchina",
+   "es": "Calabacín"
+  },
+  "liquid": false
+ },
+ {
+  "key": "spinach",
+  "category": "vegetable",
+  "kcal": 23.0,
+  "protein": 2.9,
+  "carbs": 3.6,
+  "fat": 0.4,
+  "fiber": 2.2,
+  "sugar": 0.4,
+  "salt": 0.2,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 100.0
+   }
+  ],
+  "names": {
+   "en": "Spinach",
+   "de": "Spinat",
+   "fr": "Épinards",
+   "it": "Spinaci",
+   "es": "Espinacas"
+  },
+  "liquid": false
+ },
+ {
+  "key": "mushrooms",
+  "category": "vegetable",
+  "kcal": 22.0,
+  "protein": 3.1,
+  "carbs": 3.3,
+  "fat": 0.3,
+  "fiber": 1.0,
+  "sugar": 2.0,
+  "salt": 0.01,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 100.0
+   }
+  ],
+  "names": {
+   "en": "Mushrooms",
+   "de": "Champignons",
+   "fr": "Champignons",
+   "it": "Funghi",
+   "es": "Champiñones"
+  },
+  "liquid": false
+ },
+ {
+  "key": "mixed_veg",
+  "category": "vegetable",
+  "kcal": 65.0,
+  "protein": 2.9,
+  "carbs": 13.0,
+  "fat": 0.2,
+  "fiber": 4.0,
+  "sugar": 3.0,
+  "salt": 0.05,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 150.0
+   }
+  ],
+  "names": {
+   "en": "Mixed vegetables, cooked",
+   "de": "Gemüse, gemischt, gegart",
+   "fr": "Légumes mélangés, cuits",
+   "it": "Verdure miste, cotte",
+   "es": "Verduras mixtas, cocidas"
+  },
+  "liquid": false
+ },
+ {
+  "key": "avocado",
+  "category": "fat",
+  "kcal": 160.0,
+  "protein": 2.0,
+  "carbs": 8.5,
+  "fat": 14.7,
+  "fiber": 6.7,
+  "sugar": 0.7,
+  "salt": 0.02,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 150.0
+   }
+  ],
+  "names": {
+   "en": "Avocado",
+   "de": "Avocado",
+   "fr": "Avocat",
+   "it": "Avocado",
+   "es": "Aguacate"
+  },
+  "liquid": false
+ },
+ {
+  "key": "apple",
+  "category": "fruit",
+  "kcal": 52.0,
+  "protein": 0.3,
+  "carbs": 14.0,
+  "fat": 0.2,
+  "fiber": 2.4,
+  "sugar": 10.0,
+  "salt": 0.0,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 180.0
+   }
+  ],
+  "names": {
+   "en": "Apple",
+   "de": "Apfel",
+   "fr": "Pomme",
+   "it": "Mela",
+   "es": "Manzana"
+  },
+  "liquid": false
+ },
+ {
+  "key": "banana",
+  "category": "fruit",
+  "kcal": 89.0,
+  "protein": 1.1,
+  "carbs": 23.0,
+  "fat": 0.3,
+  "fiber": 2.6,
+  "sugar": 12.0,
+  "salt": 0.0,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 120.0
+   }
+  ],
+  "names": {
+   "en": "Banana",
+   "de": "Banane",
+   "fr": "Banane",
+   "it": "Banana",
+   "es": "Plátano"
+  },
+  "liquid": false
+ },
+ {
+  "key": "orange",
+  "category": "fruit",
+  "kcal": 47.0,
+  "protein": 0.9,
+  "carbs": 12.0,
+  "fat": 0.1,
+  "fiber": 2.4,
+  "sugar": 9.0,
+  "salt": 0.0,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 150.0
+   }
+  ],
+  "names": {
+   "en": "Orange",
+   "de": "Orange",
+   "fr": "Orange",
+   "it": "Arancia",
+   "es": "Naranja"
+  },
+  "liquid": false
+ },
+ {
+  "key": "pear",
+  "category": "fruit",
+  "kcal": 57.0,
+  "protein": 0.4,
+  "carbs": 15.0,
+  "fat": 0.1,
+  "fiber": 3.1,
+  "sugar": 9.8,
+  "salt": 0.0,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 170.0
+   }
+  ],
+  "names": {
+   "en": "Pear",
+   "de": "Birne",
+   "fr": "Poire",
+   "it": "Pera",
+   "es": "Pera"
+  },
+  "liquid": false
+ },
+ {
+  "key": "strawberries",
+  "category": "fruit",
+  "kcal": 32.0,
+  "protein": 0.7,
+  "carbs": 7.7,
+  "fat": 0.3,
+  "fiber": 2.0,
+  "sugar": 4.9,
+  "salt": 0.0,
+  "servings": [
+   {
+    "unit": "cup",
+    "grams": 150.0
+   }
+  ],
+  "names": {
+   "en": "Strawberries",
+   "de": "Erdbeeren",
+   "fr": "Fraises",
+   "it": "Fragole",
+   "es": "Fresas"
+  },
+  "liquid": false
+ },
+ {
+  "key": "blueberries",
+  "category": "fruit",
+  "kcal": 57.0,
+  "protein": 0.7,
+  "carbs": 14.5,
+  "fat": 0.3,
+  "fiber": 2.4,
+  "sugar": 10.0,
+  "salt": 0.0,
+  "servings": [
+   {
+    "unit": "handful",
+    "grams": 50.0
+   },
+   {
+    "unit": "cup",
+    "grams": 140.0
+   }
+  ],
+  "names": {
+   "en": "Blueberries",
+   "de": "Heidelbeeren",
+   "fr": "Myrtilles",
+   "it": "Mirtilli",
+   "es": "Arándanos"
+  },
+  "liquid": false
+ },
+ {
+  "key": "grapes",
+  "category": "fruit",
+  "kcal": 69.0,
+  "protein": 0.7,
+  "carbs": 18.0,
+  "fat": 0.2,
+  "fiber": 0.9,
+  "sugar": 15.5,
+  "salt": 0.0,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 125.0
+   }
+  ],
+  "names": {
+   "en": "Grapes",
+   "de": "Weintrauben",
+   "fr": "Raisins",
+   "it": "Uva",
+   "es": "Uvas"
+  },
+  "liquid": false
+ },
+ {
+  "key": "almonds",
+  "category": "nut",
+  "kcal": 579.0,
+  "protein": 21.0,
+  "carbs": 22.0,
+  "fat": 50.0,
+  "fiber": 12.5,
+  "sugar": 4.4,
+  "salt": 0.0,
+  "servings": [
+   {
+    "unit": "handful",
+    "grams": 30.0
+   }
+  ],
+  "names": {
+   "en": "Almonds",
+   "de": "Mandeln",
+   "fr": "Amandes",
+   "it": "Mandorle",
+   "es": "Almendras"
+  },
+  "liquid": false
+ },
+ {
+  "key": "walnuts",
+  "category": "nut",
+  "kcal": 654.0,
+  "protein": 15.0,
+  "carbs": 14.0,
+  "fat": 65.0,
+  "fiber": 6.7,
+  "sugar": 2.6,
+  "salt": 0.0,
+  "servings": [
+   {
+    "unit": "handful",
+    "grams": 30.0
+   }
+  ],
+  "names": {
+   "en": "Walnuts",
+   "de": "Baumnüsse",
+   "fr": "Noix",
+   "it": "Noci",
+   "es": "Nueces",
+   "de-CH": "Baumnüsse"
+  },
+  "liquid": false
+ },
+ {
+  "key": "peanut_butter",
+  "category": "nut",
+  "kcal": 588.0,
+  "protein": 25.0,
+  "carbs": 20.0,
+  "fat": 50.0,
+  "fiber": 6.0,
+  "sugar": 9.0,
+  "salt": 1.1,
+  "servings": [
+   {
+    "unit": "tbsp",
+    "grams": 16.0
+   }
+  ],
+  "names": {
+   "en": "Peanut butter",
+   "de": "Erdnussbutter",
+   "fr": "Beurre de cacahuète",
+   "it": "Burro di arachidi",
+   "es": "Crema de cacahuete"
+  },
+  "liquid": false
+ },
+ {
+  "key": "dark_chocolate",
+  "category": "sweet",
+  "kcal": 598.0,
+  "protein": 7.8,
+  "carbs": 46.0,
+  "fat": 43.0,
+  "fiber": 11.0,
+  "sugar": 24.0,
+  "salt": 0.05,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 10.0
+   },
+   {
+    "unit": "bar",
+    "grams": 100.0
+   }
+  ],
+  "names": {
+   "en": "Dark chocolate, 70 %",
+   "de": "Dunkle Schokolade, 70 %",
+   "fr": "Chocolat noir, 70 %",
+   "it": "Cioccolato fondente, 70 %",
+   "es": "Chocolate negro, 70 %"
+  },
+  "liquid": false
+ },
+ {
+  "key": "milk_chocolate",
+  "category": "sweet",
+  "kcal": 535.0,
+  "protein": 7.7,
+  "carbs": 59.0,
+  "fat": 30.0,
+  "fiber": 3.4,
+  "sugar": 52.0,
+  "salt": 0.2,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 10.0
+   },
+   {
+    "unit": "bar",
+    "grams": 100.0
+   }
+  ],
+  "names": {
+   "en": "Milk chocolate",
+   "de": "Milchschokolade",
+   "fr": "Chocolat au lait",
+   "it": "Cioccolato al latte",
+   "es": "Chocolate con leche"
+  },
+  "liquid": false
+ },
+ {
+  "key": "biscuit",
+  "category": "sweet",
+  "kcal": 480.0,
+  "protein": 6.0,
+  "carbs": 66.0,
+  "fat": 21.0,
+  "fiber": 2.0,
+  "sugar": 30.0,
+  "salt": 0.6,
+  "servings": [
+   {
+    "unit": "piece",
+    "grams": 12.0
+   }
+  ],
+  "names": {
+   "en": "Biscuit",
+   "de": "Keks",
+   "fr": "Biscuit",
+   "it": "Biscotto",
+   "es": "Galleta",
+   "de-CH": "Guetzli"
+  },
+  "liquid": false
+ },
+ {
+  "key": "crisps",
+  "category": "sweet",
+  "kcal": 536.0,
+  "protein": 7.0,
+  "carbs": 53.0,
+  "fat": 34.0,
+  "fiber": 4.4,
+  "sugar": 0.5,
+  "salt": 1.3,
+  "servings": [
+   {
+    "unit": "handful",
+    "grams": 25.0
+   },
+   {
+    "unit": "portion",
+    "grams": 50.0
+   }
+  ],
+  "names": {
+   "en": "Potato crisps",
+   "de": "Kartoffelchips",
+   "fr": "Chips",
+   "it": "Patatine",
+   "es": "Patatas chips",
+   "de-CH": "Chips"
+  },
+  "liquid": false
+ },
+ {
+  "key": "ice_cream",
+  "category": "sweet",
+  "kcal": 207.0,
+  "protein": 3.5,
+  "carbs": 24.0,
+  "fat": 11.0,
+  "fiber": 0.7,
+  "sugar": 21.0,
+  "salt": 0.2,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 60.0
+   }
+  ],
+  "names": {
+   "en": "Vanilla ice cream",
+   "de": "Vanilleeis",
+   "fr": "Glace à la vanille",
+   "it": "Gelato alla vaniglia",
+   "es": "Helado de vainilla",
+   "de-CH": "Vanilleglace"
+  },
+  "liquid": false
+ },
+ {
+  "key": "apple_pie",
+  "category": "sweet",
+  "kcal": 237.0,
+  "protein": 2.0,
+  "carbs": 34.0,
+  "fat": 11.0,
+  "fiber": 1.6,
+  "sugar": 15.0,
+  "salt": 0.5,
+  "servings": [
+   {
+    "unit": "slice",
+    "grams": 120.0
+   }
+  ],
+  "names": {
+   "en": "Apple tart",
+   "de": "Apfelkuchen",
+   "fr": "Tarte aux pommes",
+   "it": "Torta di mele",
+   "es": "Tarta de manzana",
+   "de-CH": "Apfelwähe"
+  },
+  "liquid": false
+ },
+ {
+  "key": "protein_bar",
+  "category": "protein",
+  "kcal": 350.0,
+  "protein": 30.0,
+  "carbs": 30.0,
+  "fat": 10.0,
+  "fiber": 8.0,
+  "sugar": 3.0,
+  "salt": 0.5,
+  "servings": [
+   {
+    "unit": "bar",
+    "grams": 60.0
+   }
+  ],
+  "names": {
+   "en": "Protein bar",
+   "de": "Proteinriegel",
+   "fr": "Barre protéinée",
+   "it": "Barretta proteica",
+   "es": "Barrita de proteínas"
+  },
+  "liquid": false
+ },
+ {
+  "key": "whey",
+  "category": "protein",
+  "kcal": 380.0,
+  "protein": 78.0,
+  "carbs": 8.0,
+  "fat": 5.0,
+  "fiber": 0.0,
+  "sugar": 6.0,
+  "salt": 0.5,
+  "servings": [
+   {
+    "unit": "portion",
+    "grams": 30.0
+   }
+  ],
+  "names": {
+   "en": "Whey protein powder",
+   "de": "Whey-Proteinpulver",
+   "fr": "Protéine whey en poudre",
+   "it": "Proteine whey in polvere",
+   "es": "Proteína whey en polvo"
+  },
+  "liquid": false
+ },
+ {
+  "key": "olive_oil",
+  "category": "fat",
+  "kcal": 884.0,
+  "protein": 0.0,
+  "carbs": 0.0,
+  "fat": 100.0,
+  "fiber": 0.0,
+  "sugar": 0.0,
+  "salt": 0.0,
+  "servings": [
+   {
+    "unit": "tbsp",
+    "grams": 13.0
+   },
+   {
+    "unit": "tsp",
+    "grams": 4.5
+   }
+  ],
+  "names": {
+   "en": "Olive oil",
+   "de": "Olivenöl",
+   "fr": "Huile d'olive",
+   "it": "Olio d'oliva",
+   "es": "Aceite de oliva"
+  },
+  "liquid": true
+ },
+ {
+  "key": "sugar",
+  "category": "sweet",
+  "kcal": 400.0,
+  "protein": 0.0,
+  "carbs": 100.0,
+  "fat": 0.0,
+  "fiber": 0.0,
+  "sugar": 100.0,
+  "salt": 0.0,
+  "servings": [
+   {
+    "unit": "tsp",
+    "grams": 4.0
+   }
+  ],
+  "names": {
+   "en": "Sugar",
+   "de": "Zucker",
+   "fr": "Sucre",
+   "it": "Zucchero",
+   "es": "Azúcar"
+  },
+  "liquid": false
+ },
+ {
+  "key": "coffee",
+  "category": "drink",
+  "kcal": 2.0,
+  "protein": 0.1,
+  "carbs": 0.0,
+  "fat": 0.0,
+  "fiber": 0.0,
+  "sugar": 0.0,
+  "salt": 0.0,
+  "servings": [
+   {
+    "unit": "cup",
+    "grams": 200.0
+   }
+  ],
+  "names": {
+   "en": "Coffee, black",
+   "de": "Kaffee, schwarz",
+   "fr": "Café noir",
+   "it": "Caffè",
+   "es": "Café solo"
+  },
+  "liquid": true
+ },
+ {
+  "key": "cappuccino",
+  "category": "drink",
+  "kcal": 33.0,
+  "protein": 1.8,
+  "carbs": 2.7,
+  "fat": 1.7,
+  "fiber": 0.0,
+  "sugar": 2.6,
+  "salt": 0.05,
+  "servings": [
+   {
+    "unit": "cup",
+    "grams": 180.0
+   }
+  ],
+  "names": {
+   "en": "Cappuccino",
+   "de": "Cappuccino",
+   "fr": "Cappuccino",
+   "it": "Cappuccino",
+   "es": "Capuchino"
+  },
+  "liquid": true
+ },
+ {
+  "key": "latte",
+  "category": "drink",
+  "kcal": 50.0,
+  "protein": 2.6,
+  "carbs": 3.9,
+  "fat": 2.7,
+  "fiber": 0.0,
+  "sugar": 3.9,
+  "salt": 0.1,
+  "servings": [
+   {
+    "unit": "glass",
+    "grams": 300.0
+   }
+  ],
+  "names": {
+   "en": "Latte macchiato",
+   "de": "Latte macchiato",
+   "fr": "Latte macchiato",
+   "it": "Latte macchiato",
+   "es": "Café con leche",
+   "de-CH": "Milchkaffee"
+  },
+  "liquid": true
+ },
+ {
+  "key": "tea",
+  "category": "drink",
+  "kcal": 1.0,
+  "protein": 0.0,
+  "carbs": 0.2,
+  "fat": 0.0,
+  "fiber": 0.0,
+  "sugar": 0.0,
+  "salt": 0.0,
+  "servings": [
+   {
+    "unit": "cup",
+    "grams": 250.0
+   }
+  ],
+  "names": {
+   "en": "Tea",
+   "de": "Tee",
+   "fr": "Thé",
+   "it": "Tè",
+   "es": "Té"
+  },
+  "liquid": true
+ },
+ {
+  "key": "orange_juice",
+  "category": "drink",
+  "kcal": 45.0,
+  "protein": 0.7,
+  "carbs": 10.4,
+  "fat": 0.2,
+  "fiber": 0.2,
+  "sugar": 8.4,
+  "salt": 0.0,
+  "servings": [
+   {
+    "unit": "glass",
+    "grams": 250.0
+   }
+  ],
+  "names": {
+   "en": "Orange juice",
+   "de": "Orangensaft",
+   "fr": "Jus d'orange",
+   "it": "Succo d'arancia",
+   "es": "Zumo de naranja",
+   "de-CH": "Orangensaft"
+  },
+  "liquid": true
+ },
+ {
+  "key": "cola",
+  "category": "drink",
+  "kcal": 42.0,
+  "protein": 0.0,
+  "carbs": 10.6,
+  "fat": 0.0,
+  "fiber": 0.0,
+  "sugar": 10.6,
+  "salt": 0.01,
+  "servings": [
+   {
+    "unit": "glass",
+    "grams": 330.0
+   }
+  ],
+  "names": {
+   "en": "Cola",
+   "de": "Cola",
+   "fr": "Cola",
+   "it": "Cola",
+   "es": "Refresco de cola"
+  },
+  "liquid": true
+ },
+ {
+  "key": "beer",
+  "category": "drink",
+  "kcal": 43.0,
+  "protein": 0.5,
+  "carbs": 3.6,
+  "fat": 0.0,
+  "fiber": 0.0,
+  "sugar": 0.3,
+  "salt": 0.01,
+  "servings": [
+   {
+    "unit": "glass",
+    "grams": 330.0
+   }
+  ],
+  "names": {
+   "en": "Beer",
+   "de": "Bier",
+   "fr": "Bière",
+   "it": "Birra",
+   "es": "Cerveza"
+  },
+  "liquid": true
+ },
+ {
+  "key": "wine",
+  "category": "drink",
+  "kcal": 85.0,
+  "protein": 0.1,
+  "carbs": 2.6,
+  "fat": 0.0,
+  "fiber": 0.0,
+  "sugar": 0.6,
+  "salt": 0.01,
+  "servings": [
+   {
+    "unit": "glass",
+    "grams": 150.0
+   }
+  ],
+  "names": {
+   "en": "Red wine",
+   "de": "Rotwein",
+   "fr": "Vin rouge",
+   "it": "Vino rosso",
+   "es": "Vino tinto"
+  },
+  "liquid": true
+ }
+]
